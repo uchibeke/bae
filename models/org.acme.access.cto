@@ -1,0 +1,39 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace org.acme.bae
+
+participant User identified by id {
+  o String id
+  o String contact 
+  o String name optional
+  o String createdOn
+  o String lastDevice
+}
+
+asset AnAsset identified by id {
+  o String id
+  --> User owner
+  o User receiver
+  o String description
+  o String createdOn
+}
+
+transaction Give {
+  o String assetInfo
+}
+
+transaction Take {
+  --> AnAsset assetToTake
+  o String description
+  o String receiverName
+  o String owner
+}
+
+transaction Ask {
+  o String description
+  o String receiverName
+  o String Owner
+  --> AnAsset relatedAsset
+}

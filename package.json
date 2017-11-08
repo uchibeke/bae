@@ -1,0 +1,22 @@
+{
+  "name": "bae",
+  "version": "0.0.1",
+  "description": "A blockchain access ecosystem that allows users give access to an asset",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "author": "Uchi Uchibeke",
+  "email": "uchi4jah@gmail.com",
+  "license": "NO-LICENSE",
+  "devDependencies": {
+    "composer-admin": "latest",
+    "composer-client": "latest",
+    "composer-connector-embedded": "latest",
+    "browserfs": "latest",
+    "chai": "latest",
+    "eslint": "latest",
+    "istanbul": "latest",
+    "mkdirp": "latest",
+    "mocha": "latest"
+  }
+}
