@@ -15,19 +15,23 @@ participant User identified by id {
 asset AnAsset identified by id {
   o String id
   --> User owner
-  o User receiver
+  o String receiver optional
+  o String receiverContact optional
+  o Boolean given optional
   o String description
   o String createdOn
 }
 
 transaction Give {
-  o String assetInfo
+  --> User owner
+  o String receiver 
+  o String receiverContact 
+  o String description
 }
 
 transaction Take {
-  --> AnAsset assetToTake
   o String description
-  o String receiverName
+  o String receiver
   o String owner
 }
 
