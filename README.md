@@ -14,6 +14,14 @@ TODO
 
 ## Usage
 
+`composer archive create -a dist/bae.bna --sourceType dir --sourceName .`
+
+`composer network deploy -a dist/bae.bna -p hlfv1 -i PeerAdmin -s randomString -A admin -S`
+
+`composer network update -a dist/bae.bna  -p hlfv1 -i admin -s adminpw`
+
+`composer-rest-server -p hlfv1 -n bae -i admin -s adminpw -P 8080`
+
 TODO 
 
 
