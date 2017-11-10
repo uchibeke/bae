@@ -56,7 +56,7 @@ app.post('/submit', function (req, res) {
     // Start the request
     request(options, function (error, response, body) {
         if (!error && response && response.statusCode == 200) {
-            console.log("\n\nNEW TRANSACTION");
+            console.log("\n\nTRANSACTION on: " + new Date());
             console.log("*******************************************************************************************************");
             console.log("*   Blockchain Transaction ID: " + response.body.transactionId);
             console.log("*   Transaction/Contract Executed: " + response.body["$class"]);
@@ -79,8 +79,8 @@ app.post('/submit', function (req, res) {
             }
         } else {
             res.json({
-                "status": response.statusCode,
-                "data": response.body
+                "status": response ? response.statusCode : response,
+                "data": response? response.body : response
             });
         }
         console.log("*******************************************************************************************************\n");
