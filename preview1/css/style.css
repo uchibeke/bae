@@ -1,0 +1,165 @@
+/* @override
+
+ @import url("http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,700,900|Droid+Sans:400,700");
+
+ /*Other Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q, blockquote {
+    quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+    display: block;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+.cf:before, .cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+body {
+    background-color: #727272 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.portfolioPage .panel {
+    width: 100%;
+    left: 0;
+    margin-bottom: 0 !important;
+}
+
+.portfolioPageMain {
+    background: #FFFFFF !important;
+}
+
+a {
+    color: #313649 !important;
+}
+
+.portfolioTexts {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.aboutTexts {
+    background: #FFFFFF !important;;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.footerDiv h4 a {
+    font-size: 1.5em !important;
+    text-decoration: underline !important;
+}
+
+.footerDiv h3 b {
+    font-size: 1.5em !important;
+}
+
+.projectIntro a {
+    color: #E8EFF2 !important;
+    font-style: italic;
+}
+
+
+.selectedMenu {
+    border-bottom: medium solid #313649;
+}
+
+.greyOut {
+     background:#eeeeee;
+     padding-bottom: 10px;
+}
+
+.whiteOut {
+     background:#ffffff;
+     padding-bottom: 10px;
+}
+
+
+.navbar-fixed-bottom li {
+  display: inline-block !important;
+  float: none !important;
+  vertical-align: top !important;
+  text-align: center !important;
+}
+
+.success {
+    color:#00B357;
+    padding-top: 8px !important;
+    margin-left: -40px !important;
+    z-index: 3;
+}
+
+.bad {
+    color: orange;
+    padding-top: 8px !important;
+    margin-left: -40px !important;
+    z-index: 3;
+}
+
+
+/*==================================================
+ * pdf shadow
+ * ===============================================*/
+#pdfSahdow
+{
+    margin-top: 15px !important;
+  position: relative;
+  -webkit-box-shadow: 10px -10px 5px -5px rgba(38,38,38,1);
+  -moz-box-shadow: 10px -10px 5px -5px rgba(38,38,38,1);
+  box-shadow: 10px -10px 5px -5px rgba(38,38,38,1);
+}
+
+.form-horizontal .noSpace {
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}

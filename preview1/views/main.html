@@ -1,0 +1,46 @@
+<section class="portfolioPage" id="pdfSahdow">
+	<div class="panel panel-default" style="box-shadow:10px">
+		<div class="panel-body text-justify center-block portfolioPageMain" style="padding-top:0px;min-height: 100vh" ng-show="utils.doneLoadingApplicationForm">
+			<div class="page-header" style="border-bottom:4px solid #002888;margin-top:0px;">
+				<h2 style="padding-right:20px;color:#002888;font-size:20px"><img src="images/logo.png" width="100px"><span class="pull-right">Asset</span></h2>
+			</div>
+			<!-- <div class="page-header" style="margin-top:0px !important;">
+			<h4 style="font-size:30px;font-weight:200;color:#002888;padding-left: 0px;">Asset  </h4>
+			</div> -->
+			<form class="form-horizontal">
+				<div ng-repeat="(key, info) in data.asset track by $index" style="padding:0px 14px 0px 14px;">
+					<div class="form-group">
+						<i class="glyphicon glyphicon-ok-sign success"></i>
+						<label style="overflow:hidden; white-space:nowrap;text-overflow: ellipsis;" class="col-sm-3 col-xs-12 noSpace" for="text">{{utils.capitalizeAndSpace(key)}}</label>
+						<div class="col-sm-9 col-xs-12">
+							<textarea  class="form-control"
+							style="background:#ffffff;resize: none;"
+							 ng-disabled="true" > {{info}}</textarea>
+						</div>
+					</div>
+				</div>
+				<hr />
+				<div class="col-xs-12">
+					<label class="noSpace" for="text">Send Asset Info to Recipient</label>
+					<input placeholder="Cell Phone number (International format without space - +13067150000)" type="text" class="form-control" 
+					ng-model="data.cellPhoneNumber" style="background:#ffffff">
+					<a class="btn btn-default" id="sms_link">Send As SMS</a>
+				</div>
+				<br>
+				<br>
+
+			</form>
+		</div>
+		<div class="row" ng-hide="utils.doneLoadingApplicationForm" style="min-height:100vh">
+			<img src="images/loading.gif" class="img-responsive center-block" width="150px" style="padding-top:40vh">
+		</div>
+
+		<!-- <div class="aboutTexts " style="margin-top:50px;" ng-hide="data.hideNav">
+		<ul class="nav navbar-nav navbar navbar-default navbar-fixed-bottom center-block text-center" style="min-height:30px;padding-top:4px">
+		<li ng-repeat="(sKey, s) in data.form.fields" style="border:thin solid #CAD3E5;padding:0px;cursor:pointer;">
+		<a ng-click="utils.scrollTo(sKey)" style="padding:0px 4px 0px 4px;font-size:12px;"> {{utils.capitalizeAndSpace(sKey)}} </a>
+		</li>
+		</ul>
+		</div> -->
+	</div>
+</section>
