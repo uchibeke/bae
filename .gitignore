@@ -3,4 +3,5 @@ node_modules
 .idea
 .config
 .project
-composer-logs/
+*/composer-logs/*
+composer-logs
