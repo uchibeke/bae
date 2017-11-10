@@ -3,7 +3,7 @@ function($scope, $http, $timeout, $location, $anchorScroll, $routeParams) {
 
 	// This will need to change if api is hosted in a new server
 	// const apiBase = "http://localhost:8080/api/org.acme.bae.";
-	const apiBase = "http://66b9e370.ngrok.io" + "/api/org.acme.bae.";
+	const apiBase = "http://dac5a726.ngrok.io" + "/api/org.acme.bae.";
 
 	$scope.data = {};
 	d = $scope.data;
