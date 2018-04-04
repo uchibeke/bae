@@ -33,7 +33,7 @@ exports.helpers = {
         // TEXT FORMAT
         // TO GIVE ACCESS: give assetID to userName with contact <Number/Email>
         // TO CANCEL ACCESS: take assetID from userName with contact  <Number/Email>
-        // TO CHECK IF HAVE ACCESS: does userName with contact  <Number/Email> have assetID
+        // TO CHECK IF HAVE ACCESS: does userName have assetID //with contact  <Number/Email>
         switch (textParts[0].toLowerCase()) {
             case "give":
                 input = {
@@ -42,7 +42,7 @@ exports.helpers = {
                     owner: sender,
                     createdOn: this.currentTime(),
                     receiver: textParts[3],
-                    receiverContact: textParts[6],
+                    receiverContact: textParts[6] || "-NA-",
                     lastDevice: body.FromCity + " " + body.FromState + " " + body.FromCountry,
                     description: textParts[1]
                 };
@@ -54,7 +54,7 @@ exports.helpers = {
                     owner: sender,
                     createdOn: this.currentTime(),
                     receiver: textParts[3],
-                    receiverContact: textParts[6],
+                    receiverContact: textParts[6] || "-NA-",
                     lastDevice: "Iphone",
                     description: textParts[1]
                 };
@@ -66,9 +66,9 @@ exports.helpers = {
                     owner: sender,
                     createdOn: this.currentTime(),
                     receiver: textParts[1],
-                    receiverContact: textParts[4],
+                    receiverContact: textParts[6] || "-NA-",
                     lastDevice: "Iphone",
-                    description: textParts[6]
+                    description:  textParts[3] || "-NA-"
                 };
         }
         return {
