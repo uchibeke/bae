@@ -80,10 +80,17 @@ app.post('/submit', function(req, res) {
 				});
 			}
 		} else {
-			res.json({
-				"status" : response ? response.statusCode : response,
-				"data" : response ? response.body : response
+				
+			msg = "REQUEST STATUS:\n" + "Sorry. The '" + action.inputs.action.toUpperCase() + "' contract could not be executed. The Blockchain Network is currently unreachable. Uchi has been notified." + "\n\nASSET ID:\n" + action.inputs.description + "\nTIMESTAMP:\n" + new Date();
+			res.writeHead(200, {
+				'Content-Type' : 'text/xml'
 			});
+			twiml.message(msg);
+			res.end(twiml.toString());
+// 			res.json({
+// 				"status" : response ? response.statusCode : response,
+// 				"data" : response ? response.body : response
+// 			});
 		}
 		console.log("*******************************************************************************************************\n");
 	});
