@@ -53,6 +53,8 @@ app.post('/submit', function(req, res) {
 		method : 'POST',
 		json : action.inputs
 	};
+	console.log(req.body.Body)
+	console.log(action)
 
 	// Start the request
 	request(options, function(error, response, body) {
